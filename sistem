@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Academia Corpo & Vida</title>
+        <h1> Planilhas de treinos - Corpo & Vida </h1>
+        <h3> Cuidar do corpo é cuidar do futuro!</h3>
+        <style>
+            table, td{
+                border: 1px solid black; border-collapse: collapse; padding: 3px;
+            }
+            label, th{
+                color: goldenrod; background-color: black; border: 2px solid goldenrod;
+            }
+            td{
+                color: indigo;;
+            }
+            input, select{
+                background-color: gray; color: white;
+            }
+            .estatico, .search{
+                background-color: slategrey; color: white; border: 0px
+            }
+            .search, .esq{
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <h4>Cadastro de aluno</h4> 
+        <search>
+            <table class="search">
+                    <tr>
+                        <td class='estatico' colspan="2">Procurando por  treino de aluno já cadastrado?</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="matricula" class="estatico">Nome ou matricula</label>
+                        </td>
+                        <td>
+                            <input type="text" id="matricula" name="matricula">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="senha" class="estatico">Senha do aluno</label>
+                       </td>
+                       <td>
+                            <input type="password" id="senha" name="senha">
+                       </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="treino" class="estatico">Selecione o dia da semana</label>
+                        </td>
+                        <td>
+                            <select id="treino">
+                                <option value="Segunda">Segunda</option>
+                                <option value="Terça">Terça</option>
+                                <option value="Quarta">Quarta</option>
+                                <option value="Quinta">Quinta</option>
+                                <option value="Sexta">Sexta</option>
+                                <option value="Sábado">Sábado</option>
+                                <option value="Domingo">Domingo</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="background-color: indigo;">
+                            <input type="submit" style="background-color: black; color: goldenrod; border: 2px solid goldenrod;"      value="                                        Procurar                                     ">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </novo_cadastro>
+
+
+        <Cadastro>
+
+            <table style="border: 0px; background-color: slategrey;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label  for="nome_aluno" style="background-color: slategrey; color: white; border: 0px;">Nome</label>
+                        </td>
+                        <td>
+                            <input type="text" id="nome" name="nome_aluno"><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="idade" class="estatico">Idade</label>
+                        </td>
+                        <td>
+                            <input type="text" id="idade" name="idade"><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="telefone" class="estatico">Telefone</label>
+                        </td>
+                        <td>
+                            <input type="text" id="telefone" name="telefone"><br>
+                        </td>
+                       
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="sexo" class="estatico">Sexo</label>
+                        </td>
+                        <td>
+                            <select id="sexo">
+                                <option value="Masculino">Masculino</option>
+                                <option value="Feminino">Feminino</option>
+                                <option value="not_inform">Prefiro não informar</option>
+                            </select>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="background-color:indigo;">
+                            <input type="submit"  style="background-color: black; color: goldenrod; border: 2px solid goldenrod"    value="                         Cadastrar                      ">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </Cadastro>
+        <hr>
+        <treino>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aluno: Paulo</th>
+                        <th>1º exercício</th>
+                        <th>2º exercício</th>
+                        <th>3º exercício</th>
+                        <th>4º exercício</th>
+                        <th>Cardio</td>
+                        <th>Técnica avançada</th>
+                        <th>Já concluído?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Segunda</th>
+                        <td>Supino reto</td>
+                        <td>Crucifixo</td>
+                        <td>Supino inclinado</td>
+                        <td>Peck deck</td>
+                        <td>20 minutos</td>
+                        <td>Drop set</td>
+                        <td>
+                            <input type="checkbox" id="feito" name="feito">Concluído</input>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <th>Terça</th>
+                        <td>Puxada romana</td>
+                        <td>Puxada frente</td>
+                        <td>Remada curvada</td>
+                        <td>Remada unilateral</td>
+                        <td>25 minutos</td>
+                        <td>Rest pause</td>
+                        <td>
+                            <input type="checkbox" for="feito" name="feito">Concluído</input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Quarta</th>
+                        <td>Agachamento</td>
+                        <td>Leg press</td>
+                        <td>Cadeira extensora</td>
+                        <td>Mesa flexora</td>
+                        <td>10 minutos</td>
+                        <td>FST-7</td>
+                        <td>
+                            <input type="checkbox" for="feito" name="feito">Concluído</input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Quinta</th>
+                        <td colspan="4" style="text-align: center; color: red;">Descanso</td>
+                        <td>60 minutos</td>
+                        <td>HIIT</td>
+                        <td>
+                            <input type="checkbox" for="feito" name="feito">Concluído</input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Sexta</th>
+                        <td colspan="2" style="text-align: center;">Elevação frontal + lateral</td>
+                        <td colspan="2" style="text-align: center;">Panturrilha sentado + máquina</td>
+                        <td>30 minutos</td>
+                        <td>Bi-set</td>
+                        <td>
+                            <input type="checkbox" for="feito" name="feito">Concluído</input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Sábado</th>
+                        <td colspan="6" style="color: red; text-align: center;">Descanso total</td>
+                        <td>
+                            <input type="checkbox" for="feito" name="feito">Concluído</input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Domingo</th>
+                        <td colspan="4" style="text-align: center;">Abdômen em casa</td>
+                        <td>60 minutos em jejum</td>
+                        <td>jejum</td>
+                        <td>
+                            <input type="checkbox" for="feito" name="feito">Concluído</input>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </treino>
+        <br>
+        <cadastro_treino>
+            <table style="background-color: blueviolet;">
+                <tr>
+                    <th colspan="2">
+                        <h4>Cadastrar novo treino</h4>
+                    </th>
+                </tr>
+                <tr>
+                    <td><label for="dia">Dia da semana</label></td>
+                    <td>
+                        <select id="dia">
+                            <option value="Segunda">Segunda</option>
+                            <option value="Terça">Terça</option>
+                            <option value="Quarta">Quarta</option>
+                            <option value="Quinta">Quinta</option>
+                            <option value="Sexta">Sexta</option>
+                            <option value="Sábado">Sábado</option>
+                            <option value="Domingo">Domingo</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ex1">1º Exercício</label>
+                    </td>
+                    <td>
+                        <input type="text" id="ex1" name="ex1">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="ex2">2º Exercício</label></td>
+                    <td><input type="text" id="ex2" name="ex2"></td>
+                </tr>
+                <tr>
+                    <td><label for="ex3">3º Exercício</label></td>
+                    <td><input type="text" id="ex3" name="ex3"></td>
+                </tr>
+                <tr>
+                    <td><label for="ex4">4º Exercício</label></td>
+                    <td><input type="text" id="ex4" name="ex4"></td>
+                </tr>
+                <tr>
+                    <td><label for="cardio">Cardio</label></td>
+                    <td><input type="text" id="cardio" name="cardio"></td>
+                </tr>
+                <tr>
+                    <td><label for="tecnica">Técnica Avançada</label></td>
+                    <td><input type="text" id="tecnica" name="tecnica"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Cadastrar treino" style="background-color: slategrey; color: white; border: 2px solid indigo;"></td>
+                </tr>
+            </table>
+        </cadastro_treino>
+    </body>
+</html>

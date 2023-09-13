@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Academia Corpo & Vida</title>
+        <h1> Planilhas de treinos Corpo & Vida</h1>
+        <h3> Cuidar do corpo é cuidar do futuro!</h3>
+        <redirect>
+            <ul>
+                <li><a href="page1.html">Home</a></li>
+                <li><a href="page2.html">Área de treinos</a></li>
+                <li><a class="ativo" href="page3.html">Área de cadastros</a></li>
+              </ul>
+        </redirect>
+        <style>
+            head, body{
+                background-image: url(imagens/background.jpg);
+                background-size:cover;
+                margin-bottom: 0px;
+                margin-top: 2px;
+            }
+            div, h1, h3{
+                background-color: goldenrod
+            }
+            div, h1, h3, h4{
+                display: flex;
+                margin: 5px;
+                margin-left: 1px;
+                padding: 5px;
+            }
+            h1, h3, h4{
+                color:white; font-weight: bold;
+            }
+            div{
+                font-size: 15pt;
+                color: white;
+                font-style: italic; font-weight: bold;
+            }
+            h1, h3{
+                color:white; font-weight: bold; width: 480px;
+            }
+            table, td{
+                border: 1px solid black; border-collapse: collapse; padding: 3px; background-color: slategrey; color: white;
+            }
+            label{
+                color: goldenrod; background-color: black; border: 2px solid goldenrod; 
+            }
+            td{
+                margin: 3px;
+                padding: 3px;
+            }
+            input, select{
+                background-color: gray; color: white;
+            }
+            ul{
+                list-style-type: none;
+                margin: 0px;
+                padding: 0px;
+                width: 200px;
+                background-color: #f1f1f1;
+                border: 1px solid #555;
+            }
+            li a{
+                display: block;
+                color: #000;
+                padding: 8px 16px;
+                text-decoration: none;
+            }
+            li{
+                text-align: center;
+                border: 1px solid black;
+            }
+            li :last-child{
+                border-bottom: none;
+            }
+            li a.ativo{
+                background-color: goldenrod;
+                color:white
+            }
+            li a:hover:not(.ativo){
+                background-color: #555;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <cadastro_treino style="clear: none;">
+            <div style="width: 310px;">Cadastrar Treino</div>
+            <table style="background-color: slategray;">
+                <form>
+                    <tr>
+                        <th colspan="2">
+                            <h4>Inserir dados do treino</h4>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td><label for="dia">Dia da semana</label></td>
+                        <td>
+                            <select id="dia">
+                                <option value="Segunda">Segunda</option>
+                                <option value="Terça">Terça</option>
+                                <option value="Quarta">Quarta</option>
+                                <option value="Quinta">Quinta</option>
+                                <option value="Sexta">Sexta</option>
+                                <option value="Sábado">Sábado</option>
+                                <option value="Domingo">Domingo</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="ex1">1º Exercício</label>
+                        </td>
+                        <td>
+                            <input type="text" id="ex1" name="ex1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="ex2">2º Exercício</label></td>
+                        <td><input type="text" id="ex2" name="ex2"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="ex3">3º Exercício</label></td>
+                        <td><input type="text" id="ex3" name="ex3"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="ex4">4º Exercício</label></td>
+                        <td><input type="text" id="ex4" name="ex4"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="cardio">Cardio</label></td>
+                        <td><input type="text" id="cardio" name="cardio"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="tecnica">Técnica Avançada</label></td>
+                        <td><input type="text" id="tecnica" name="tecnica"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Cadastrar treino" style="background-color: slategrey; color: white; border: 2px solid #f1f1f1;"></td>
+                    </tr>
+                </form>
+            </table>
+        </cadastro_treino>
+        <Cadastro style="clear: none;">
+            <div style="width: 245px;">Cadastrar aluno</div>
+            <table style="border: 0px; background-color: slategrey;">
+                <tbody>
+                    <form>
+                        <tr>
+                            <td>
+                                <label  for="nome_aluno" class="estatico">Nome</label>
+                            </td>
+                            <td>
+                                <input type="text" id="nome" name="nome_aluno"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="idade" class="estatico">Idade</label>
+                            </td>
+                            <td>
+                                <input type="text" id="idade" name="idade"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="telefone" class="estatico">Telefone</label>
+                            </td>
+                            <td>
+                                <input type="text" id="telefone" name="telefone"><br>
+                            </td>
+                        
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="sexo" class="estatico">Sexo</label>
+                            </td>
+                            <td>
+                                <select id="sexo">
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Feminino">Feminino</option>
+                                    <option value="not_inform">Prefiro não informar</option>
+                                </select>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="background-color:#f1f1f1;">
+                                <input type="submit"  style="background-color: black; color: goldenrod; border: 2px solid goldenrod; width: 240px; text-align: center;" value="Cadastrar">
+                            </td>
+                        </tr>
+                    </form>
+                </tbody>
+            </table>
+        </Cadastro>
+    </body>
+</html>

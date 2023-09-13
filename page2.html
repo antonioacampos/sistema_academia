@@ -1,0 +1,270 @@
+<!DOCTYPE hmtl>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Academia Corpo & Vida</title>
+        <redirect style="float: left; margin-right: 2px; padding: 0px;">
+            <ul>
+                <li><a href="page1.html">Home</a></li>
+                <li><a class="ativo" href="page2.html">Área de treinos</a></li>
+                <li><a href="page3.html">Área de cadastros</a></li>
+              </ul>
+        </redirect>
+        <h1 style="float: left;"> Planilhas de treinos Corpo & Vida</h1><br><br><br>
+        <h3 style="float:left;"> Cuidar do corpo é cuidar do futuro!</h3><br><br><br>
+
+        <style>
+            head, body{
+                background-image: url(imagens/background.jpg);
+                background-size:cover;
+                margin-bottom: 0px;
+                margin-top: 2px;
+            }
+            
+            .treino, div, h1, h3{
+                background-color: goldenrod; background-blend-mode: color;
+                display: flex;
+                margin: 3px;
+                padding: 5px;
+            }
+            .treino{
+                background-color: aliceblue; display: block ;
+            }
+            h1, h3{
+                color:white; font-weight: bold; width: 480px;
+            }
+            div{
+                font-size: 15pt;
+                color: white;
+                font-weight: bold;
+                width: 300px;
+            }
+            table, td{
+                border: 1px solid black; border-collapse: collapse; padding: 3px;
+                background-color: #f1f1f1;
+            }
+            label, th{
+                color: goldenrod; background-color: black; border: 2px solid goldenrod;
+            }
+            td{
+                color: indigo;;
+            }
+            input, select{
+                background-color: gray; color: white;
+            }
+            .estatico, .search{
+                background-color: slategrey; color: white; border: 0px
+            }
+            ul{
+                list-style-type: none;
+                margin: 0px;
+                padding: 0px;
+                width: 200px;
+                background-color: #f1f1f1;
+                border: 1px solid #555;
+            }
+            li a{
+                display: block;
+                color: #000;
+                padding: 8px 16px;
+                text-decoration: none;
+            }
+            li{
+                text-align: center;
+                border: 1px solid black;
+            }
+            li :last-child{
+                border-bottom: none;
+            }
+            li a.ativo{
+                background-color: goldenrod;
+                color:white
+            }
+            li a:hover:not(.ativo){
+                background-color: #555;
+                color: white;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <treino>
+            <div>Aluno: Paulo Ferreira</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Treino</th>
+                        <th>1º exercício</th>
+                        <th>2º exercício</th>
+                        <th>3º exercício</th>
+                        <th>4º exercício</th>
+                        <th>Cardio</td>
+                        <th>Técnica avançada</th>
+                        <th>Já concluído?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Segunda</th>
+                        <td>Supino reto</td>
+                        <td>Crucifixo</td>
+                        <td>Supino inclinado</td>
+                        <td>Peck deck</td>
+                        <td>20 minutos</td>
+                        <td>Drop set</td>
+                        <td>
+                            <input type="checkbox" id="feito" name="feito">Concluído</input>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <th>Terça</th>
+                        <td>Puxada romana</td>
+                        <td>Puxada frente</td>
+                        <td>Remada curvada</td>
+                        <td>Remada unilateral</td>
+                        <td>25 minutos</td>
+                        <td>Rest pause</td>
+                        <td>
+                            <input type="checkbox" for="feito" name="feito">Concluído</input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Quarta</th>
+                        <td>Agachamento</td>
+                        <td>Leg press</td>
+                        <td>Cadeira extensora</td>
+                        <td>Mesa flexora</td>
+                        <td>10 minutos</td>
+                        <td>FST-7</td>
+                        <td>
+                            <input type="checkbox" for="feito" name="feito">Concluído</input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Quinta</th>
+                        <td colspan="4" style="text-align: center; color: red;">Descanso</td>
+                        <td>60 minutos</td>
+                        <td>HIIT</td>
+                        <td>
+                            <input type="checkbox" for="feito" name="feito">Concluído</input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Sexta</th>
+                        <td colspan="2" style="text-align: center;">Elevação frontal + lateral</td>
+                        <td colspan="2" style="text-align: center;">Panturrilha sentado + máquina</td>
+                        <td>30 minutos</td>
+                        <td>Bi-set</td>
+                        <td>
+                            <input type="checkbox" for="feito" name="feito">Concluído</input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Sábado</th>
+                        <td colspan="6" style="color: red; text-align: center;">Descanso total</td>
+                        <td>
+                            <input type="checkbox" for="feito" name="feito">Concluído</input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Domingo</th>
+                        <td colspan="4" style="text-align: center;">Abdômen em casa</td>
+                        <td>60 minutos em jejum</td>
+                        <td>Jejum</td>
+                        <td>
+                            <input type="checkbox" for="feito" name="feito">Concluído</input>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>Aluna: Marta Ferreira</div>
+            <table style="margin-bottom: 0px;">
+                <thead>
+                    <tr>
+                        <th>Treino</th>
+                        <th>1º exercício</th>
+                        <th>2º exercício</th>
+                        <th>3º exercício</th>
+                        <th>4º exercício</th>
+                        <th>Cardio</td>
+                        <th>Técnica avançada</th>
+                        <th>Já concluído?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Segunda</th>
+                        <td>Supino reto</td>
+                        <td>Crucifixo</td>
+                        <td>Supino inclinado</td>
+                        <td>Peck deck</td>
+                        <td>20 minutos</td>
+                        <td>Drop set</td>
+                        <td>
+                            <input type="checkbox" id="feito" name="feito">Concluído</input>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <th>Terça</th>
+                        <td>Puxada romana</td>
+                        <td>Puxada frente</td>
+                        <td>Remada curvada</td>
+                        <td>Remada unilateral</td>
+                        <td>25 minutos</td>
+                        <td>Rest pause</td>
+                        <td>
+                            <input type="checkbox" for="feito" name="feito">Concluído</input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Quarta</th>
+                        <td>Agachamento</td>
+                        <td>Leg press</td>
+                        <td>Cadeira extensora</td>
+                        <td>Mesa flexora</td>
+                        <td>10 minutos</td>
+                        <td>FST-7</td>
+                        <td>
+                            <input type="checkbox" for="feito" name="feito">Concluído</input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Quinta</th>
+                        <td colspan="4" style="text-align: center; color: red;">Descanso</td>
+                        <td>60 minutos</td>
+                        <td>HIIT</td>
+                        <td>
+                            <input type="checkbox" for="feito" name="feito">Concluído</input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Sexta</th>
+                        <td colspan="2" style="text-align: center;">Elevação frontal + lateral</td>
+                        <td colspan="2" style="text-align: center;">Panturrilha sentado + máquina</td>
+                        <td>30 minutos</td>
+                        <td>Bi-set</td>
+                        <td>
+                            <input type="checkbox" for="feito" name="feito">Concluído</input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Sábado</th>
+                        <td colspan="6" style="color: red; text-align: center;">Descanso total</td>
+                        <td>
+                            <input type="checkbox" for="feito" name="feito">Concluído</input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Domingo</th>
+                        <td colspan="4" style="text-align: center;">Abdômen em casa</td>
+                        <td>60 minutos em jejum</td>
+                        <td>Jejum</td>
+                        <td>
+                            <input type="checkbox" for="feito" name="feito">Concluído</input>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </treino>
+    </body>
+</html>

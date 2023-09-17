@@ -124,8 +124,19 @@
                 </table>
             </search>
         </principal_area>
-        <personais style="float: right;">
+        <info style="float: right; clear: right; margin-top: 5px;">
             <table>
+                <tr>
+                    <th>Informações para contato:</th>
+                </tr>
+                <tr><td>Telefone: (16) 3361-5398</td></tr>
+                <tr><td>Email: academia.contato@corpoevida.com</td></tr>
+                <tr><td>Endereço da unidade: Rua Aquidaban Nº1, Centro, São Carlos, SP</td></tr>
+            </table>
+        </info>
+        <personais id="professor" style="float: right; clear: right;">
+            <table id="tabelaProf">
+                <tbody id="corpo">
                 <tr>
                     <th colspan="3">Professores disponíveis no momento:</th>
                 </tr>
@@ -143,22 +154,108 @@
                 <tr>
                     <td>Estagiário Luiz</td>
                     <td>Educação física - UFPR</td>
-                    <td>Experiência: 3 meses</td>
+                    <td>Experiência: 1 ano</td>
                 </tr>
                 <tr>
-                    <td colspan="3" style="text-align: center;">No momento, temos estes professores à sua disposição</td>
+                    <td colspan="3" style="text-align: center;" class="fim">No momento, temos estes professores à sua disposição</td>
                 </tr>
+            </tbody>
             </table>
+            <Cadastro style="clear: none;">
+                <div style="width: max-width;">Cadastrar professor</div>
+                <table  style="width: 430px; border: 0px; background-color: slategrey;">
+                    <tbody >
+                        <form action="">
+                            <tr>
+                                <td>
+                                    <label for="nome_aluno" class="estatico">Nome</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="nome" name="nome_aluno"><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="formacao" class="estatico">Formação</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="formacao" name="formacao"><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="exp" class="estatico">Experiência (anos)</label>
+                                </td>
+                                <td>
+                                    <input type="number" step="0.5" id="exp" name="exp"><br>
+                                </td>
+                            
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="background-color:slategrey;">
+                                    <button type="button" onclick=addProf() style="background-color: black  ; color:goldenrod; border: 2px solid goldenrod; height: 20px; width: 420px; text-align: center;" value="Cadastrar">Cadastrar</button>
+                                </td>
+                            </tr>
+                        </form>
+                    </tbody>
+                </table>
+            </Cadastro>
         </personais>
-        <info style="float: right; clear: right; margin-top: 5px;">
-            <table>
-                <tr>
-                    <th>Informações para contato:</th>
-                </tr>
-                <tr><td>Telefone: (16) 3361-5398</td></tr>
-                <tr><td>Email: academia.contato@corpoevida.com</td></tr>
-                <tr><td>Endereço da unidade: Rua Aquidaban Nº1, Centro, São Carlos, SP</td></tr>
-            </table>
-        </info>
+        <script>
+            function addProf(){
+                var i = 0
+                var nome = document.getElementById("nome").value
+                var forma = document.getElementById("formacao").value
+                var exp = document.getElementById("exp").value
+                
+                //document.getElementById("fim").style.display = "none"
+                //var apagar = document.getElementsByTagName("fim")
+                var linhas = document.getElementsByClassName('fim');
+                //console.log(linhas[i].ariaValueText);
+                for (let index = 0; index < linhas.length; index++) {
+                    linhas[index].classList.add('oculta');
+                    
+                }
+                
+                /*var tabela = document.querySelector("table");
+                var cabeca = document.querySelector("thead");
+                var corpo = document.querySelector("tbody");
+                var linha_titulo1 = document.querySelector("th:nth-child(1)");
+                var linha_titulo2 = document.querySelector("th:nth-child(2)");*/
+
+                var  corpo = document.getElementById("corpo");
+                //var corpo = document.querySelector("tbody");
+                var linha = document.createElement("tr");
+                var prof_nome = document.createElement("td");
+                var prof_facul = document.createElement("td");
+                var prof_exp = document.createElement("td")
+                prof_nome.innerText = nome;
+                prof_facul.innerText = forma;
+                if (exp>1)
+                    prof_exp.innerText = "Experiência: " + exp + " anos"
+                else
+                    prof_exp.innerText = "Experiência: " + exp + " ano"
+                
+                //tabela.appendChild(corpo);
+                linha.appendChild(prof_nome);
+                linha.appendChild(prof_facul);
+                linha.appendChild(prof_exp)
+                corpo.appendChild(linha)
+
+                var ultLinha = document.createElement("tr")
+                var ultElem = document.createElement("td")
+                ultElem.innerText = "No momento, temos estes professores à sua disposição"
+                ultElem.style.textAlign = "center"
+                ultElem.colSpan = "3"
+                ultLinha.className = "fim"
+                ultElem.className = "fim"
+                ultLinha.appendChild(ultElem)
+                corpo.appendChild(ultLinha)
+                //document.getElementById("fim").style.display = "block"
+                i++
+            }
+            
+        </script>
     </body>
+    
 </html>
